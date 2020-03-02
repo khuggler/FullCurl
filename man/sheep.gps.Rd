@@ -19,7 +19,6 @@ Merge Raw GPS Data with AnimalID, Sex, and Eartag ID
 }
 \examples{
 
-Add mortality dates
 }
 \keyword{ID,}
 \keyword{animal}

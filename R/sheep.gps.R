@@ -13,8 +13,6 @@ sheep.gps<-function(vecpath, sheepdb){
   sheep.db<-read.csv(sheepdb, stringsAsFactors = F)
   sheep.dat<-sheep.dat[sheep.dat$CollarSerialNumber %in% sheep.db$SerialNumber,]
 
-  #'Add mortality dates
-
   sheep.db$CapDate<-as.Date(sheep.db$CapDate, format = '%m/%d/%Y')
   sheep.db$MortDate<-ifelse(is.na(sheep.db$MortDate), as.character(Sys.Date()), as.character(sheep.db$MortDate))
   sheep.db$MortDate<-as.Date(sheep.db$MortDate, format = '%Y-%m-%d')
