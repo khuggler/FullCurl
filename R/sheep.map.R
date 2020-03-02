@@ -15,6 +15,7 @@
 
 sheep.map<-function(vecpath, sheepdb, idcol, nlocs, xcol, ycol, proj){
   
+  options(viewer = NULL)
   sheep<-FullCurl::sheep.gps(vecpath = vecpath, sheepdb = sheepdb)
 
   uni<-unique(sheep[,idcol])
@@ -32,8 +33,8 @@ sheep.map<-function(vecpath, sheepdb, idcol, nlocs, xcol, ycol, proj){
   sp::coordinates(new.sub)<-c(xcol, ycol)
   sp::proj4string(new.sub)<-proj
   
-  pal <- colorRampPalette(brewer.pal(16, "Spectral"))
-  map<-mapview::mapview(new.sub, zcol = "AID", cex = 8, map.types = 'OpenTopoMap', col.regions = pal)
+  pal <- colorRampPalette(RColorBrewer::brewer.pal(16, "Spectral"))
+  mapview::mapview(new.sub, zcol = "AID", cex = 8, map.types = 'OpenTopoMap', col.regions = pal)
   
   return(map)
 }
