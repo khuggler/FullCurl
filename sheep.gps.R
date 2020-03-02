@@ -2,14 +2,6 @@
 #' @description Merge Raw GPS Data with AnimalID, Sex, and Eartag ID
 #' @param vecpath path where vec data is located
 #' @param sheepdb path to sheep capture database
-#' @param passwords character vector of passwords in same order as usernames
-#' @param tempdir temporary directory for data to download (can be desktop)
-#' @param ST Logical. TRUE/FALSE. Whether you need SirTrack data
-#' @param STUser SirTrack Username
-#' @param STPass SirTrack Password
-#' @param cType "ATS/IRID" or "ATS/GSTAR"
-#' @param capdat data.frame with all the capture information
-#' @param dateformat format of TelemDate in gps data
 #' @return Returns a data.frame with all gps data, AnimalID, Sex, and Species
 #' @keywords capture, animal ID, gps, append
 #' @export
