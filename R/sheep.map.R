@@ -34,7 +34,7 @@ sheep.map<-function(vecpath, sheepdb, idcol, nlocs, xcol, ycol, proj){
   sp::proj4string(new.sub)<-proj
   
   pal <- colorRampPalette(RColorBrewer::brewer.pal(16, "Spectral"))
-  mapview::mapview(new.sub, zcol = "AID", cex = 8, map.types = 'OpenTopoMap', col.regions = pal)
+  map<-mapview::mapview(new.sub, zcol = "AID", cex = 8, map.types = 'OpenTopoMap', col.regions = pal)
   
   return(map)
 }
